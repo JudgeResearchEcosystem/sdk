@@ -35,12 +35,12 @@ class Coinalytix:
     """
 
     def __init__(self):
-        self.url_root = "https://timeseries.coinalytix.io/getohlcdata?"
+        self.url_root = 'https://historicaldata.coinalytix.io/ohlc?' # old url:  "https://timeseries.coinalytix.io/getohlcdata?" # 
         self.api_key = ""
 
     def with_api_key(self, key):
         """set API key for Coinalytix authentication"""
-        self.api_key = key
+        self.api_key = key # 
 
     def fetch_hd(self, asset):
         """fetch historical data dictionary"""
@@ -53,13 +53,12 @@ class Coinalytix:
             + "&ticker="
             + asset.ticker
             + "&startDate="
-            + str(int(asset.start_date.timestamp() * 1000))
+            + str(int(asset.start_date.timestamp() )) 
             + "&interval="
             + asset.interval
             + "&numPeriods="
             + str(asset.num_periods)
         )
-
         r = requests.get(_url)
         if r.status_code == 200:
             _json = r.json()
