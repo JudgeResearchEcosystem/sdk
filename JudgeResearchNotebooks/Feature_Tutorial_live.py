@@ -1,4 +1,4 @@
-JR_API_KEY = "hEkFs9wE1ud5qIqvDH2A2JPBvf8xkDb9bAGmSf30" # Your Judge Research API was given to you upon sign-up.  You can find it under your profile.
+JR_API_KEY = "<your API key here>" # Your Judge Research API was given to you upon sign-up.  You can find it under your profile.
 CA_API_KEY = "<your API key here>" # Sign up at coinalytix.io
 
 # Import classes that handle API connections and parameters
